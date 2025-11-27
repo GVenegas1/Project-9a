@@ -1,12 +1,15 @@
 # count_letters.py
 
+#project-9a
+
+#Gabriel Venegas
+#GitHub username: GVenegas1
+#Date: 11/26/2025
+
 def count_letters(text):
-    """
-    This function takes a string and counts how many times each letter appears.
-     It count letters (A–Z and a–z). Lowercase and uppercase
-     count as the same letter. All the keys in the dictionary will be Uppercase letters. If the string
-     is empty or has no letters, return an empty dictionary.
-    """
+    """ This function takes a string and counts how many times each letter appears.
+    It count letters (A–Z and a–z). Lowercase and uppercase count as the same letter. All the keys in the dictionary will be Uppercase letters. If the string
+     is empty or has no letters, return an empty dictionary."""
 
     # This list will store our results.
     letter_counts = {}
@@ -38,4 +41,4 @@ def count_letters(text):
     # After checking every character, return the final counts
     return letter_counts
 
-#print(count_letters("12345!!!"))
+print(count_letters("Quis custodiet ipsos custodes?"))
