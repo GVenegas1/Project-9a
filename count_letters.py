@@ -1,5 +1,3 @@
-# count_letters.py
-
 # Project 9a
 # Gabriel Venegas
 # GitHub username: GVenegas1
