@@ -30,7 +30,7 @@ def count_letters(text):
     return letter_counts
 
 
-# Optional testing in PyCharm
+# Testing
 
 if __name__ == "__main__":
     test_string = "Quis custodiet ipsos custodes?"
