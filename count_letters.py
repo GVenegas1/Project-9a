@@ -9,8 +9,9 @@
 
 def count_letters(text):
     """ This function takes a string and counts how many times each letter appears.
-    It count letters (A–Z and a–z). Lowercase and uppercase count as the same letter. All the keys in the dictionary will be Uppercase letters. If the string
-     is empty or has no letters, return an empty dictionary."""
+        It count letters (A–Z and a–z). Lowercase and uppercase count as the same letter.
+        All the keys in the list will be Uppercase letters. If the string
+        is empty or has no letters, return an empty list"""
 
     # This list will store our results.
     letter_counts = {}
@@ -36,7 +37,7 @@ def count_letters(text):
         if upper_i not in letter_counts:
             letter_counts[upper_i] = 1
         else:
-            # If we HAVE seen it, just add 1 to the current count
+            # just add 1 to the current count
             letter_counts[upper_i] += 1
 
     # After checking every character, return the final counts
