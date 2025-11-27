@@ -10,20 +10,20 @@ def count_letters(text):
     letter_counts = {}  # dictionary to store the counts
 
     # Loop through each character in the text
-    for char in text:
+    for i in text:
         # Convert lowercase to uppercase
-        if 'a' <= char <= 'z':
-            char = chr(ord(char) - 32)
-        elif 'A' <= char <= 'Z':
-            char = char
+        if 'a' <= i <= 'z':
+            i = chr(ord(i) - 32)
+        elif 'A' <= i <= 'Z':
+            i = i
         else:
             continue  # skip non-letter characters
 
         # Count the letter
-        if char not in letter_counts:
-            letter_counts[char] = 1
+        if i not in letter_counts:
+            letter_counts[i] = 1
         else:
-            letter_counts[char] += 1
+            letter_counts[i] += 1
 
     return letter_counts
 
