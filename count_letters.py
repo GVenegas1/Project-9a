@@ -1,46 +1,38 @@
 # count_letters.py
 
-#project-9a
-
-#Gabriel Venegas
-#GitHub username: GVenegas1
-#Date: 11/26/2025
-
+# Project 9a
+# Gabriel Venegas
+# GitHub username: GVenegas1
+# Date: 11/26/2025
 
 def count_letters(text):
-    """ This function takes a string and counts how many times each letter appears.
-        It count letters (A–Z and a–z). Lowercase and uppercase count as the same letter.
-        All the keys in the list will be Uppercase letters. If the string
-        is empty or has no letters, return an empty list"""
+    """
+    Counts how many times each letter appears in a string.
+    """
+    letter_counts = {}  # dictionary to store the counts
 
-    # This list will store our results.
-    letter_counts = {}
-
-    # Go through each character in the string one by one
-    for i in text:
-
-        # Check if the character is a lowercase letter (a-z)
-        if 'a' <= i <= 'z':
-            # Convert lowercase to uppercase so everything is counted the same way
-            upper_i = chr(ord(i) - 32)
-
-        # Check if the character is an uppercase letter (A-Z)
-        elif 'A' <= i <= 'Z':
-            upper_i = i
-
+    # Loop through each character in the text
+    for char in text:
+        # Convert lowercase to uppercase
+        if 'a' <= char <= 'z':
+            char = chr(ord(char) - 32)
+        elif 'A' <= char <= 'Z':
+            char = char
         else:
-            # If it's not a letter (ex: number, space, punctuation), skip it
-            continue
+            continue  # skip non-letter characters
 
-        # Update the list
-        # If we've never seen this letter before, start its count at 1
-        if upper_i not in letter_counts:
-            letter_counts[upper_i] = 1
+        # Count the letter
+        if char not in letter_counts:
+            letter_counts[char] = 1
         else:
-            # just add 1 to the current count
-            letter_counts[upper_i] += 1
+            letter_counts[char] += 1
 
-    # After checking every character, return the final counts
     return letter_counts
 
-print(count_letters("Quis custodiet ipsos custodes?"))
+
+# Optional testing in PyCharm
+
+if __name__ == "__main__":
+    test_string = "Quis custodiet ipsos custodes?"
+    print("Testing count_letters() with:", test_string)
+    print(count_letters(test_string))
